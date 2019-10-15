@@ -37,8 +37,20 @@ public class Dia extends TitleAreaDialog {
     protected Control createDialogArea(Composite parent) {
         Composite area = (Composite) super.createDialogArea(parent);
         Composite container = new Composite(area, SWT.NONE);
-        container.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+        
+        
+        ///
+        
+        GridData gridata = new GridData(SWT.FILL, SWT.FILL, true, true);
+        gridata.minimumHeight = 600;
+        gridata.minimumWidth = 200;
+        
+        ///
+        
+        container.setLayoutData(gridata);
         GridLayout layout = new GridLayout(2, false);
+
+        
         container.setLayout(layout);
 
         createFirstName(container);
@@ -83,6 +95,8 @@ public class Dia extends TitleAreaDialog {
         firstName = txtFirstName.getText();
         lastName = lastNameText.getText();
 
+        new BrowseFile();
+        
     }
 
     @Override
