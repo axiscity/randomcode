@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/descriptor/basic" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_5bK9wCajEea8NImc6oTGTQ">
+  <imports xsi:type="commands:BindingContext" xmi:id="_ES5z8CayEeaCx61ld7Qt3A" elementId="org.eclipse.ui.contexts.dialogAndWindow"/>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_mnmpsCamEea8NImc6oTGTQ" featurename="commands" parentElementId="org.eclipse.e4.legacy.ide.application">
+    <elements xsi:type="commands:Command" xmi:id="_bJ6gkCa1EeaCx61ld7Qt3A" elementId="com.packtpub.e4.clock.ui.command.showTheTime" commandName="Show the Time" description="Shows the Time"/>
+    <elements xsi:type="commands:Command" xmi:id="_4805wO7AEemdAYHjfwDnRQ" elementId="com.packtpub.e4.clock.ui.command.opendialog" commandName="OpenDialog" description="Open Dialog"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_RCxgMCavEeaCx61ld7Qt3A" featurename="handlers" parentElementId="org.eclipse.e4.legacy.ide.application">
+    <elements xsi:type="commands:Handler" xmi:id="_eP-SkCa1EeaCx61ld7Qt3A" elementId="com.packtpub.e4.clock.ui.handler.showTheTime" contributionURI="bundleclass://com.packtpub.e4.clock.ui/com.packtpub.e4.clock.ui.handlers.ShowTheTime" command="_bJ6gkCa1EeaCx61ld7Qt3A"/>
+    <elements xsi:type="commands:Handler" xmi:id="_d1BeoO7DEemdAYHjfwDnRQ" elementId="com.packtpub.e4.clock.ui.handler.opendialog" contributionURI="bundleclass://com.packtpub.e4.clock.ui/com.packtpub.e4.clock.ui.handlers.AnotherTry" command="_4805wO7AEemdAYHjfwDnRQ"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_TicyMCawEeaCx61ld7Qt3A" featurename="menuContributions" parentElementId="org.eclipse.e4.legacy.ide.application">
+    <elements xsi:type="menu:MenuContribution" xmi:id="_ZVGtUCawEeaCx61ld7Qt3A" elementId="com.packtpub.e4.clock.ui.menucontribution" parentId="help">
+      <children xsi:type="menu:HandledMenuItem" xmi:id="_R7m0QO79EemASYW1dXdG1A" elementId="com.packtpub.e4.clock.ui.menucontribution.pickle" label="pickle this" command="_4805wO7AEemdAYHjfwDnRQ"/>
+    </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_OvbdMCayEeaCx61ld7Qt3A" featurename="bindingTables" parentElementId="org.eclipse.e4.legacy.ide.application">
+    <elements xsi:type="commands:BindingTable" xmi:id="_Ufv2ACayEeaCx61ld7Qt3A" elementId="com.packtpub.e4.clock.ui.bindingtable.0" bindingContext="_ES5z8CayEeaCx61ld7Qt3A">
+      <bindings xmi:id="_fhWiQCayEeaCx61ld7Qt3A" elementId="com.packtpub.e4.clock.ui.keybinding.0" keySequence="M1+9"/>
+    </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_vFlvYCa2EeaCx61ld7Qt3A" featurename="descriptors" parentElementId="org.eclipse.e4.legacy.ide.application">
+    <elements xsi:type="basic:PartDescriptor" xmi:id="_zTsHgCa2EeaCx61ld7Qt3A" elementId="com.packtpub.e4.clock.ui.partdescriptor.timeZoneTableView" label="Time Zone Table View" iconURI="platform:/plugin/com.packtpub.e4.clock.ui/icons/sample.gif" category="Timekeeping" contributionURI="bundleclass://com.packtpub.e4.clock.ui/com.packtpub.e4.clock.ui.views.TimeZoneTableView">
+      <menus xsi:type="menu:PopupMenu" xmi:id="_9SU64Ca2EeaCx61ld7Qt3A" elementId="com.packtpub.e4.clock.ui.popup">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="__aNNYCa2EeaCx61ld7Qt3A" elementId="com.packtpub.e4.clock.ui.handledmenuitem.showTheTime" label="Show the Time" command="_bJ6gkCa1EeaCx61ld7Qt3A"/>
+      </menus>
+    </elements>
+  </fragments>
+</fragment:ModelFragments>
